@@ -5,11 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Tarea_Semana_2
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-        }
-    }
-}
+int num1;
+int num2;
+Console.WriteLine("ingrese un numero")
+
