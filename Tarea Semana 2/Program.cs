@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ConversionDeTipos
 {
@@ -74,6 +75,31 @@ namespace ConversionDeTipos
             int num10 = Convert.ToInt32(Console.ReadLine());
             int modulo = num9 % num10;
             Console.WriteLine("El módulo de {0} y {1} es: {2}", num9, num10, modulo);
+
+            Console.WriteLine("\nUso de char y string");
+
+            Console.Write("\nIngrese una cadena de texto: ");
+            string cadena = Console.ReadLine();
+            Console.WriteLine("Cadena de texto en mayuscula: {0} ", cadena.ToUpper());
+            Console.WriteLine("Cadena de texto en minuscula: {0}", cadena.ToLower());
+
+            string reverso = String.Join("", cadena.ToCharArray().Reverse());
+            Console.WriteLine("Cadena de texto al reves: {0}", reverso);
+
+            Console.Write("\nIngrese la palabra a buscar en la cadena anterior: ");
+            string palabra = Console.ReadLine();
+            if(cadena.Contains(palabra))
+            {
+                Console.WriteLine($"La palabra {palabra} fue encontrada en la cadena de texto.");
+            }
+            else
+            {
+                Console.WriteLine($"La palabra {palabra} no fue encontrada en la cadena de texto.");
+            }
+            string vocales = cadena.Replace("a", "").Replace("e", "").Replace("i", "").Replace("o", "").Replace("u", "").Replace("A", "").Replace("E", "").Replace("I", "").Replace("O", "").Replace("U", "");
+            int contador = cadena.Length - vocales.Length;
+            Console.WriteLine($"El número de vocales en la cadena de texto es: {contador}");
+
 
             Console.ReadLine();
         }
