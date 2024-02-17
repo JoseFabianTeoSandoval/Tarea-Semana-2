@@ -137,7 +137,7 @@ namespace TareaSemana2
             double fahrenheit2 = Convert.ToDouble(Console.ReadLine());
             double celsius2 = (fahrenheit2 - 32) * 5 / 9;
             Console.WriteLine($"La temperatura en grados Celsius es: {celsius2}");
-
+            //Hola
             Console.ReadLine();
         }
     }
